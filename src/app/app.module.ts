@@ -4,7 +4,11 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { BlogPage } from '../pages/blog/blog';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { GalleryPage } from '../pages/gallery/gallery';
+import { NextEventsPage } from '../pages/next-events/next-events';
+import { RadioPage } from '../pages/radio/radio';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,7 +17,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    BlogPage,
+    ContactUsPage,
+    GalleryPage,
+    NextEventsPage,
+    RadioPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    BlogPage,
+    ContactUsPage,
+    GalleryPage,
+    NextEventsPage,
+    RadioPage
   ],
   providers: [
     StatusBar,

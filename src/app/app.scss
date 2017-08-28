@@ -14,10 +14,18 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.sideImageContainer{
+  display: flex;
+  height: 130px;
+  .sideImage{
+    height: 130px;
+    margin: auto
+  }
+}
 .toolbar-background {
-  background-color: #D4091C;
+  background-color: #C60D3B;
 }
 
-.sideImage{
-  height: 150px;
-}
+
+
+.toolbar-title.toolbar-title-wp { color: #FFFFFF }

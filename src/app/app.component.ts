@@ -8,6 +8,8 @@ import { BlogPage } from '../pages/blog/blog';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { NextEventsPage } from '../pages/next-events/next-events';
+import { FriendsGroupsPage } from '../pages/friends-groups/friends-groups';
+import { CultsPage } from '../pages/cults/cults';
 import { RadioPage } from '../pages/radio/radio';
 
 @Component({
@@ -26,6 +28,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
+      { title: 'Cultos', component: CultsPage },
+      { title: 'Grupos de Amigos', component: FriendsGroupsPage },
       { title: 'Blog', component: BlogPage },
       { title: 'Próximos Eventos', component: NextEventsPage },
       { title: 'Radio', component: RadioPage },

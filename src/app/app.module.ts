@@ -9,6 +9,8 @@ import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { NextEventsPage } from '../pages/next-events/next-events';
 import { RadioPage } from '../pages/radio/radio';
+import { FriendsGroupsPage } from '../pages/friends-groups/friends-groups';
+import { CultsPage } from '../pages/cults/cults';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +23,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactUsPage,
     GalleryPage,
     NextEventsPage,
-    RadioPage
+    RadioPage,
+    FriendsGroupsPage,
+    CultsPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactUsPage,
     GalleryPage,
     NextEventsPage,
-    RadioPage
+    RadioPage,
+    FriendsGroupsPage,
+    CultsPage
   ],
   providers: [
     StatusBar,

@@ -8,17 +8,28 @@
 </ion-header>
 
 
-
-<ion-content >
+<ion-content>
   <div class="containerBanner">
     <img class="banner" src="assets/images/proximos-eventos.png" alt="banner2">
   </div>
 
+  <!--<ion-list>-->
+  <!--<ion-item *ngFor="let event of nextEvents">-->
+  <!--<ion-button>-->
+  <!--<span></span>-->
+  <!--<span></span>-->
+  <!--</ion-button>-->
+  <!--</ion-item>-->
+
+
+  <!--</ion-list>-->
 
   <ion-grid>
     <ion-row *ngFor="let event of nextEvents">
-      <ion-col col-3>{{event.startDate | date:'dMMM'}}</ion-col>
-      <ion-col >{{event.title | uppercase}}</ion-col>
+      <button ion-item (click)="createEvent(event.title, event.location, '', event.startDate, event.endDate)">
+        <ion-col col-3>{{event.startDate | date:'dMMM'}}</ion-col>
+        <ion-col>{{event.title | uppercase}}</ion-col>
+      </button>
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -16,7 +16,10 @@
 // automatically applied to the <body> element in the app.
 .sideImageContainer{
   display: flex;
-  height: 130px;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   .sideImage{
     height: 130px;
     margin: auto
@@ -24,6 +27,12 @@
 }
 .toolbar-background {
   background-color: #C60D3B;
+}
+
+.containerBanner{
+  .banner{
+    height: 120px
+  }
 }
 
 

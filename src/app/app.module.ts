@@ -11,9 +11,10 @@ import { NextEventsPage } from '../pages/next-events/next-events';
 import { RadioPage } from '../pages/radio/radio';
 import { FriendsGroupsPage } from '../pages/friends-groups/friends-groups';
 import { CultsPage } from '../pages/cults/cults';
-
+import { Calendar } from '@ionic-native/calendar';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LOCALE_ID } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Calendar,
+    { provide: LOCALE_ID, useValue: "es-AR" },
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

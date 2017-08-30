@@ -14,4 +14,11 @@
     <img class="banner" src="assets/images/proximos-eventos.png" alt="banner2">
   </div>
 
+
+  <ion-grid>
+    <ion-row *ngFor="let event of nextEvents">
+      <ion-col col-3>{{event.startDate | date:'dMMM'}}</ion-col>
+      <ion-col >{{event.title | uppercase}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

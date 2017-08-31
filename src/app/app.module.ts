@@ -19,10 +19,11 @@ import { LOCALE_ID } from '@angular/core';
 import { NextEventsProvider } from '../providers/next-events/next-events';
 import {HttpModule} from '@angular/http';
 import { BlogProvider } from '../providers/blog/blog';
-import { CultsProvider } from '../providers/cults/cults';
 import {
   GoogleMaps
-} from '@ionic-native/google-maps';@NgModule({
+} from '@ionic-native/google-maps';
+import { GalleryProvider } from '../providers/gallery/gallery';
+import { VideosProvider } from '../providers/videos/videos';@NgModule({
   declarations: [
     MyApp,
     HomePage,
@@ -61,7 +62,8 @@ import {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NextEventsProvider,
     BlogProvider,
-    CultsProvider
+    GalleryProvider,
+    VideosProvider
   ]
 })
 export class AppModule {}

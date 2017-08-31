@@ -20,8 +20,15 @@ import { NextEventsProvider } from '../providers/next-events/next-events';
 import {HttpModule} from '@angular/http';
 import { BlogProvider } from '../providers/blog/blog';
 import { CultsProvider } from '../providers/cults/cults';
-
-@NgModule({
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  CameraPosition,
+  MarkerOptions,
+  Marker
+} from '@ionic-native/google-maps';@NgModule({
   declarations: [
     MyApp,
     HomePage,

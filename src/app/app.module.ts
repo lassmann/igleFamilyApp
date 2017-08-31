@@ -16,6 +16,10 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LOCALE_ID } from '@angular/core';
+import { NextEventsProvider } from '../providers/next-events/next-events';
+import {HttpModule} from '@angular/http';
+import { BlogProvider } from '../providers/blog/blog';
+import { CultsProvider } from '../providers/cults/cults';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { LOCALE_ID } from '@angular/core';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -51,7 +56,10 @@ import { LOCALE_ID } from '@angular/core';
     Calendar,
     EmailComposer,
     { provide: LOCALE_ID, useValue: "es-AR" },
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NextEventsProvider,
+    BlogProvider,
+    CultsProvider
   ]
 })
 export class AppModule {}

@@ -51,56 +51,31 @@ export class FriendsGroupsPage {
     this.map.one(GoogleMapsEvent.MAP_READY)
       .then(() => {
 
-      this.map.addMarkerCluster({
-        markers:[
-          {
-            title: 'Iglesia de la Familia',
-            snippet: 'Lider: Andres Neznazko, Horario: MARTES 20:30hs',
-            icon: 'blue',
+        this.map.addMarkerCluster({
+          markers: [
+            {
+              title: 'Iglesia de la Familia',
+              snippet: 'Lider: Andres Neznazko, Horario: MARTES 20:30hs',
+              icon: 'blue',
               animation: 'DROP',
               position: {
                 lat: -26.787181,
                 lng: -60.436987
               }
-          },
-          {
-            title: 'Casa: Raul Cernik',
-            icon: 'red',
-            snippet: 'Lider: Ricardo Baby, Horario: LUNES 20:30hs',
-            animation: 'DROP',
-            position: {
-              lat: -26.789805,
-              lng: -60.441503
+            },
+            {
+              title: 'Casa: Raul Cernik',
+              icon: 'red',
+              snippet: 'Lider: Ricardo Baby, Horario: LUNES 20:30hs',
+              animation: 'DROP',
+              position: {
+                lat: -26.789805,
+                lng: -60.441503
+              }
             }
-          }
-        ],
-        icons:[]
-      })
-
-        // this.map.addMarker({
-        //   title: 'Iglesia de la Familia',
-        //   snippet: 'Lider: Andres Neznazko, Horario: MARTES 20:30hs',
-        //   icon: 'blue',
-        //   animation: 'DROP',
-        //   position: {
-        //     lat: -26.787181,
-        //     lng: -60.436987
-        //   }
-        // })
-        //
-        //
-        // this.map.addMarker({
-        //   title: 'Casa: Raul Cernik',
-        //   icon: 'red',
-        //   snippet: 'Lider: Ricardo Baby, Horario: LUNES 20:30hs',
-        //   animation: 'DROP',
-        //   position: {
-        //     lat: -26.789805,
-        //     lng: -60.441503
-        //   }
-        // })
-
-
+          ],
+          icons: []
+        })
       });
   }
 

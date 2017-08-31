@@ -12,6 +12,7 @@ import { RadioPage } from '../pages/radio/radio';
 import { FriendsGroupsPage } from '../pages/friends-groups/friends-groups';
 import { CultsPage } from '../pages/cults/cults';
 import { Calendar } from '@ionic-native/calendar';
+import { EmailComposer } from '@ionic-native/email-composer';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LOCALE_ID } from '@angular/core';
@@ -48,6 +49,7 @@ import { LOCALE_ID } from '@angular/core';
     StatusBar,
     SplashScreen,
     Calendar,
+    EmailComposer,
     { provide: LOCALE_ID, useValue: "es-AR" },
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

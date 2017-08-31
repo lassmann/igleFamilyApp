@@ -21,13 +21,7 @@ import {HttpModule} from '@angular/http';
 import { BlogProvider } from '../providers/blog/blog';
 import { CultsProvider } from '../providers/cults/cults';
 import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
-  Marker
+  GoogleMaps
 } from '@ionic-native/google-maps';@NgModule({
   declarations: [
     MyApp,
@@ -62,6 +56,7 @@ import {
     SplashScreen,
     Calendar,
     EmailComposer,
+    GoogleMaps,
     { provide: LOCALE_ID, useValue: "es-AR" },
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NextEventsProvider,

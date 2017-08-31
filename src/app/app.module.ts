@@ -17,13 +17,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LOCALE_ID } from '@angular/core';
 import { NextEventsProvider } from '../providers/next-events/next-events';
-import {HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { BlogProvider } from '../providers/blog/blog';
+import { YouTubePipe } from '../pipes/you-tube/you-tube'
 import {
   GoogleMaps
 } from '@ionic-native/google-maps';
 import { GalleryProvider } from '../providers/gallery/gallery';
-import { VideosProvider } from '../providers/videos/videos';@NgModule({
+import { VideosProvider } from '../providers/videos/videos';
+@NgModule({
   declarations: [
     MyApp,
     HomePage,
@@ -33,7 +35,8 @@ import { VideosProvider } from '../providers/videos/videos';@NgModule({
     NextEventsPage,
     RadioPage,
     FriendsGroupsPage,
-    CultsPage
+    CultsPage,
+    YouTubePipe
   ],
   imports: [
     BrowserModule,
@@ -59,11 +62,12 @@ import { VideosProvider } from '../providers/videos/videos';@NgModule({
     EmailComposer,
     GoogleMaps,
     { provide: LOCALE_ID, useValue: "es-AR" },
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     NextEventsProvider,
     BlogProvider,
     GalleryProvider,
     VideosProvider
   ]
 })
-export class AppModule {}
+export class AppModule {
+}

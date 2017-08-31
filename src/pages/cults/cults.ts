@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import {VideosProvider} from '../../providers/videos/videos'
 /**
  * Generated class for the CultsPage page.
  *
@@ -14,12 +14,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'cults.html',
 })
 export class CultsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  videos;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private videosProvider: VideosProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CultsPage');
+  }
+
+  ngOnInit(){
+    this.videosProvider.getVideos().then(videos => {
+      console.log('test', videos)
+      this.videos = videos
+    })
   }
 
 }

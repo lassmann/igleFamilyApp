@@ -3,11 +3,20 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Cultos</ion-title>
+    <ion-title>Videos</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding="">
+
+  <ion-card *ngFor="let video of videos">
+    <ion-card-header>
+      <h4>{{video.title}}</h4>
+    </ion-card-header>
+    <ion-card-content>
+      <iframe width="100%" type="text/html" height="315" [src]="video.url | youTube" frameborder="0"></iframe>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

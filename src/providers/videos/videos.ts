@@ -5,19 +5,22 @@ import 'rxjs/add/operator/map';
 const VIDEOS = [
   {
     title: 'Iglesia de la Familia',
-    url: 'https://www.youtube.com/watch?v=vkueDK--07U'
-
+    url: 'https://www.youtube.com/watch?v=vkueDK--07U',
+    id:'vkueDK--07U'
   }, {
     title: 'Nuestro origen - Historia de Iglesia de la Familia',
-    url: 'https://www.youtube.com/watch?v=DGAjLSoh-6M'
+    url: 'https://www.youtube.com/watch?v=DGAjLSoh-6M',
+    id:'DGAjLSoh-6M'
   },
   {
     title: 'Comedor Shire',
-    url: 'https://www.youtube.com/watch?v=MWT56Wr9Rrs'
+    url: 'https://www.youtube.com/watch?v=MWT56Wr9Rrs',
+    id: 'MWT56Wr9Rrs'
   },
   {
     title: 'IEJ Chaco',
-    url: 'https://www.youtube.com/watch?v=8ReVYoWMok4'
+    url: 'https://www.youtube.com/watch?v=8ReVYoWMok4',
+    id: '8ReVYoWMok4'
   }];
 
 /*

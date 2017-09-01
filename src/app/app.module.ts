@@ -19,7 +19,9 @@ import { LOCALE_ID } from '@angular/core';
 import { NextEventsProvider } from '../providers/next-events/next-events';
 import { HttpModule } from '@angular/http';
 import { BlogProvider } from '../providers/blog/blog';
-import { YouTubePipe } from '../pipes/you-tube/you-tube'
+import { YouTubePipe } from '../pipes/you-tube/you-tube';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+
 import {
   GoogleMaps
 } from '@ionic-native/google-maps';
@@ -61,6 +63,7 @@ import { VideosProvider } from '../providers/videos/videos';
     Calendar,
     EmailComposer,
     GoogleMaps,
+    YoutubeVideoPlayer,
     { provide: LOCALE_ID, useValue: "es-AR" },
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     NextEventsProvider,

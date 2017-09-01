@@ -21,12 +21,21 @@ import { HttpModule } from '@angular/http';
 import { BlogProvider } from '../providers/blog/blog';
 import { YouTubePipe } from '../pipes/you-tube/you-tube';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
-
-import {
-  GoogleMaps
-} from '@ionic-native/google-maps';
+import { GoogleMaps } from '@ionic-native/google-maps';
 import { GalleryProvider } from '../providers/gallery/gallery';
 import { VideosProvider } from '../providers/videos/videos';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyDvNC4xexz7ICq4XF0VhDq0hd9FeJOzfkg',
+  authDomain: 'igle-family-30ebf.firebaseapp.com',
+  databaseURL: 'https://igle-family-30ebf.firebaseio.com',
+  projectId: 'igle-family-30ebf',
+  storageBucket: 'igle-family-30ebf.appspot.com',
+  messagingSenderId: '659164393702'
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,6 +52,8 @@ import { VideosProvider } from '../providers/videos/videos';
   imports: [
     BrowserModule,
     HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

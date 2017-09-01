@@ -35,8 +35,8 @@ export class NextEventsPage {
 
   ngOnInit() {
     this.loadingPopup.present();
-    this.nexEventsProvider.getNextEventsSlowly().then(events => {
-      this.nextEvents = events;
+    this.nexEventsProvider.getNextEvents().subscribe(data => {
+      this.nextEvents = data;
       this.loadingPopup.dismiss();
     })
   }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 
 const NEXTEVENTS = [{
   title: 'Escuela de líderes',
@@ -25,19 +26,25 @@ const NEXTEVENTS = [{
   img: 'http://iglesiadelafamilia.com/wp-content/uploads/2017/08/4.png'
 }];
 /*
-  Generated class for the NextEventsProvider provider.
+ Generated class for the NextEventsProvider provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
+ See https://angular.io/docs/ts/latest/guide/dependency-injection.html
+ for more info on providers and Angular DI.
+ */
 @Injectable()
 export class NextEventsProvider {
+  events:FirebaseListObservable<any>;
 
-  constructor(public http: Http) {
+  constructor(public http: Http, db: AngularFireDatabase) {
+    this.events = db.list('/events')
   }
 
-  getNextEvents(){
-    return Promise.resolve(NEXTEVENTS);
+  // getNextEvents(){
+  //   return Promise.resolve(NEXTEVENTS);
+  // }
+
+  getNextEvents() {
+    return this.events;
   }
 
   getNextEventsSlowly() {

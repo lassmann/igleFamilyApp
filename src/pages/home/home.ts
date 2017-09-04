@@ -5,7 +5,7 @@ import { RadioPage } from '../../pages/radio/radio';
 import { AboutUsPage } from '../../pages/about-us/about-us';
 import { LocationPage } from '../../pages/location/location';
 import { FriendsGroupsPage } from '../../pages/friends-groups/friends-groups';
-import { GalleryPage } from '../../pages/gallery/gallery';
+import { NextEventsPage } from '../../pages/next-events/next-events';
 import { CultsPage } from '../../pages/cults/cults';
 import { BlogPage } from '../../pages/blog/blog';
 
@@ -47,8 +47,8 @@ export class HomePage {
     this.navCtrl.push(FriendsGroupsPage);
   }
 
-  goToGallery() {
-    this.navCtrl.push(GalleryPage);
+  goToNextEvents() {
+    this.navCtrl.push(NextEventsPage);
   }
 
   goToBlog() {

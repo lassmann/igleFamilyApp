@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { VideosProvider } from '../../providers/videos/videos';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
@@ -18,7 +18,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 export class CultsPage {
   videos;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private videosProvider: VideosProvider, private youtube: YoutubeVideoPlayer) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private loadingCtrl: LoadingController, private videosProvider: VideosProvider, private youtube: YoutubeVideoPlayer) {
     //constructor(public navCtrl: NavController, public navParams: NavParams, private videosProvider: VideosProvider) {
   }
 
@@ -26,9 +26,15 @@ export class CultsPage {
     console.log('ionViewDidLoad CultsPage');
   }
 
+  loadingPopup = this.loadingCtrl.create({
+    content: 'Cargando...'
+  });
+
   ngOnInit() {
-    this.videosProvider.getVideos().then(videos => {
-      this.videos = videos
+    this.loadingPopup.present();
+    this.videosProvider.getVideos().subscribe(data => {
+      this.videos = data;
+      this.loadingPopup.dismiss();
     })
   }
 

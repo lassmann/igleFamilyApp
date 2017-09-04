@@ -22,6 +22,8 @@ export class NextEventsPage {
   }
 
   createEvent(title: string, location: string, notes: string, startDate: Date, endDate: Date) {
+    startDate = new Date(startDate);
+    endDate = new Date(endDate);
     this.calendar.createEventInteractively(title, location, notes, startDate, endDate)
   }
 

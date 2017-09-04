@@ -1,27 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
-const VIDEOS = [
-  {
-    title: 'Iglesia de la Familia',
-    url: 'https://www.youtube.com/watch?v=vkueDK--07U',
-    id:'vkueDK--07U'
-  }, {
-    title: 'Nuestro origen - Historia de Iglesia de la Familia',
-    url: 'https://www.youtube.com/watch?v=DGAjLSoh-6M',
-    id:'DGAjLSoh-6M'
-  },
-  {
-    title: 'Comedor Shire',
-    url: 'https://www.youtube.com/watch?v=MWT56Wr9Rrs',
-    id: 'MWT56Wr9Rrs'
-  },
-  {
-    title: 'IEJ Chaco',
-    url: 'https://www.youtube.com/watch?v=8ReVYoWMok4',
-    id: '8ReVYoWMok4'
-  }];
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 /*
  Generated class for the VideosProvider provider.
@@ -31,13 +11,13 @@ const VIDEOS = [
  */
 @Injectable()
 export class VideosProvider {
-
-  constructor(public http: Http) {
-    console.log('Hello VideosProvider Provider');
+  videos: FirebaseListObservable<any>;
+  constructor(public http: Http,  db: AngularFireDatabase) {
+    this.videos = db.list('/videos')
   }
 
   getVideos() {
-    return Promise.resolve(VIDEOS)
+    return this.videos
   }
 
 }

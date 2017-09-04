@@ -4,8 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { AboutUsPage } from '../pages/about-us/about-us';
+import { LocationPage } from '../pages/location/location';
 import { BlogPage } from '../pages/blog/blog';
-import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { NextEventsPage } from '../pages/next-events/next-events';
 import { RadioPage } from '../pages/radio/radio';
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     BlogPage,
-    ContactUsPage,
+    AboutUsPage,
+    LocationPage,
     GalleryPage,
     NextEventsPage,
     RadioPage,
@@ -61,7 +63,8 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     BlogPage,
-    ContactUsPage,
+    AboutUsPage,
+    LocationPage,
     GalleryPage,
     NextEventsPage,
     RadioPage,

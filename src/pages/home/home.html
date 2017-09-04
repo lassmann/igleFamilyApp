@@ -11,58 +11,15 @@
   <div class="containerBanner">
     <img class="banner" src="assets/images/banner2.png" alt="banner2">
   </div>
-  <div class="vision">
-    <h3 class="title">Nuestra visión</h3>
-    <p>Existimos para alcanzar a cada familia para Cristo, ayudándoles a crecer,
-      servir, amar a Dios con sus vidas, en unidad.</p>
-  </div>
+  <button ion-button block (click)="goToAboutUs()">Nosotros</button>
+  <button ion-button block (click)="goToLocation()">Ubicacion</button>
+  <button ion-button block (click)="goToRadio()">Radio</button>
+  <button ion-button block (click)="contact()">Contacto</button>
+  <button ion-button block (click)="goToFriendsGroup()">Grupos de Amigos</button>
+  <button ion-button block (click)="goToGallery()">Galeria</button>
+  <button ion-button block (click)="goToBlog()">Blog</button>
+  <button ion-button block (click)="goToVideos()">Videos</button>
 
-  <div class="shepherds">
-    <div><h3>Nuestros pastores</h3></div>
-    <ion-list>
-      <ion-item>
-        <ion-avatar item-left>
-          <img src="assets/images/pastorAndres.png">
-        </ion-avatar>
-        <h2>Andrés Neznajko</h2>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-left>
-          <img src="assets/images/pastorCarlos.png">
-        </ion-avatar>
-        <h2>Carlos Cernik</h2>
-      </ion-item>
 
-    </ion-list>
-  </div>
-  <div class="activities">
-    <h4>Actividades</h4>
-    <div>
-      <h6>Escuela de Líderes</h6>
-      <p>Es un espacio creado para la Formación Teológica y Ministerial de Líderes de Grupos de Amigos y
-        Ministerios de la Iglesia de la Familia. Les brinda la posibilidad de compartir las problemáticas y
-        encontrar consejo y guía a la luz de la Palabra de Dios;
-        como así también estudiar y profundizar en las doctrinas fundamentales del Cristianismo.</p>
-    </div>
-    <div>
-      <h6>Mujeres</h6>
-      <p>Participa de reuniones pensadas y diseñadas especialmente para mujeres que quieren seguir creciendo
-        en el amor de Jesús, compartiendo juntas un tiempo de amistad y reflexión.</p>
-    </div>
-    <div>
-      <h6>Niños</h6>
-      <p>Estamos plenamente convencidos que si queremos una transformación en la sociedad y en la familia,
-        esta debe comenzar con cada uno de nosotros y sobre todo por los niños que son nuestro presente.</p>
-    </div>
-    <div>
-      <h6>Jóvenes</h6>
-      <p>Nuestro propósito es desarrollar un espacio creativo, divertido y de reflexión para fortalecer
-        vínculos de amistad y compartir de manera sana a nuestro Señor.</p>
-    </div>
-  </div>
-  <div class="location">
-    <h4>Ubicación</h4>
-    <div #igleLocation id="igleLocation"></div>
-  </div>
 
 </ion-content>

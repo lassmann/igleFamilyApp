@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { BlogPage } from '../pages/blog/blog';
-import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { NextEventsPage } from '../pages/next-events/next-events';
 import { FriendsGroupsPage } from '../pages/friends-groups/friends-groups';
@@ -33,9 +32,8 @@ export class MyApp {
       { title: 'Blog', component: BlogPage },
       { title: 'Próximos Eventos', component: NextEventsPage },
       { title: 'Radio', component: RadioPage },
-      { title: 'Galeria', component: GalleryPage },
-      { title: 'Contacto', component: ContactUsPage }
-    ];
+      { title: 'Galeria', component: GalleryPage }
+      ];
 
   }
 

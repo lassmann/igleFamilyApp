@@ -32,6 +32,7 @@ export class BlogPage {
     this.loadingPopup.present();
     this.blogProvider.getEntries().subscribe(data => {
       this.blog = data;
+      console.log('test', data)
       this.loadingPopup.dismiss();
     })
   }

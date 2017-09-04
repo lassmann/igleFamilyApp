@@ -12,5 +12,9 @@
   <div class="containerBanner">
     <img class="banner" src="assets/images/blog.png" alt="banner2">
   </div>
-
+  <ion-card *ngFor="let entry of blog">
+    <ion-card-content >
+      {{entry.title}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

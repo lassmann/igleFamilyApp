@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { LocationPage } from '../pages/location/location';
 import { BlogPage } from '../pages/blog/blog';
+import { BlogDetailPage } from '../pages/blog-detail/blog-detail';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { NextEventsPage } from '../pages/next-events/next-events';
 import { RadioPage } from '../pages/radio/radio';
@@ -42,6 +43,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     BlogPage,
+    BlogDetailPage,
     AboutUsPage,
     LocationPage,
     GalleryPage,
@@ -63,6 +65,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     BlogPage,
+    BlogDetailPage,
     AboutUsPage,
     LocationPage,
     GalleryPage,

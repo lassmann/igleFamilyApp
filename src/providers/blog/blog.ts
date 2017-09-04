@@ -6,12 +6,13 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class BlogProvider {
   blog: FirebaseListObservable<any>;
+
   constructor(public http: Http, db: AngularFireDatabase) {
-    this.blog = db.list('/events')
+    this.blog = db.list('/blog')
   }
 
   getEntries() {
-    return Promise.resolve(this.blog);
+    return this.blog;
   }
 
 }

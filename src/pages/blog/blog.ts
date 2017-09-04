@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { BlogProvider } from '../../providers/blog/blog'
 
 /**
@@ -17,15 +17,23 @@ import { BlogProvider } from '../../providers/blog/blog'
 export class BlogPage {
   blog;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private blogProvider: BlogProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private blogProvider: BlogProvider, private loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BlogPage');
   }
 
+  loadingPopup = this.loadingCtrl.create({
+    content: 'Cargando...'
+  });
+
   ngOnInit() {
-    this.blogProvider.getEntries().then(entries => this.blog = entries)
+    this.loadingPopup.present();
+    this.blogProvider.getEntries().subscribe(data => {
+      this.blog = data;
+      this.loadingPopup.dismiss();
+    })
   }
 
 }

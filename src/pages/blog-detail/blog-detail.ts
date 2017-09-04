@@ -16,6 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class BlogDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    console.log('test', this.navParams.get("entry"))
   }
 
   ionViewDidLoad() {

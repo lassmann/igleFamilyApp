@@ -28,6 +28,7 @@ import { GalleryProvider } from '../providers/gallery/gallery';
 import { VideosProvider } from '../providers/videos/videos';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { LocationsProvider } from '../providers/locations/locations';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDvNC4xexz7ICq4XF0VhDq0hd9FeJOzfkg',
@@ -86,7 +87,8 @@ export const firebaseConfig = {
     NextEventsProvider,
     BlogProvider,
     GalleryProvider,
-    VideosProvider
+    VideosProvider,
+    LocationsProvider
   ]
 })
 export class AppModule {

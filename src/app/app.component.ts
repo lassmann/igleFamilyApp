@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { BlogPage } from '../pages/blog/blog';
-import { GalleryPage } from '../pages/gallery/gallery';
+// import { GalleryPage } from '../pages/gallery/gallery';
 import { NextEventsPage } from '../pages/next-events/next-events';
 import { FriendsGroupsPage } from '../pages/friends-groups/friends-groups';
 import { CultsPage } from '../pages/cults/cults';
@@ -19,21 +19,21 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any, androidIcon: string,iosIcon: string }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Videos', component: CultsPage },
-      { title: 'Grupos de Amigos', component: FriendsGroupsPage },
-      { title: 'Blog', component: BlogPage },
-      { title: 'Próximos Eventos', component: NextEventsPage },
-      { title: 'Radio', component: RadioPage },
-      { title: 'Galeria', component: GalleryPage }
-      ];
+      { title: 'Home', component: HomePage, androidIcon: 'md-home', iosIcon: 'ios-home' },
+      { title: 'Videos', component: CultsPage, androidIcon: 'md-videocam', iosIcon: 'ios-videocam'  },
+      { title: 'Grupos de Amigos', component: FriendsGroupsPage, androidIcon: 'md-map', iosIcon: 'ios-map' },
+      { title: 'Blog', component: BlogPage, androidIcon: 'md-book', iosIcon: 'ios-book'  },
+      { title: 'Próximos Eventos', component: NextEventsPage, androidIcon: 'md-calendar', iosIcon: 'ios-calendar'  },
+      { title: 'Radio', component: RadioPage, androidIcon: 'md-radio', iosIcon: 'ios-radio'  },
+      //{ title: 'Galeria', component: GalleryPage }
+    ];
 
   }
 

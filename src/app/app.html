@@ -11,6 +11,7 @@
         <img src="assets/images/logo2.png" class="sideImage" alt="logo">
       </div>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon ios="{{p.iosIcon}}" md="{{p.androidIcon}}"></ion-icon>
         <b>{{p.title}}</b>
       </button>
 

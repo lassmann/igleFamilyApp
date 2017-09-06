@@ -5,10 +5,16 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class NextEventsProvider {
-  events:FirebaseListObservable<any>;
+  events: FirebaseListObservable<any>;
 
   constructor(public http: Http, db: AngularFireDatabase) {
-    this.events = db.list('/events')
+    this.events = db.list('/events',
+      {
+        query: {
+          orderByChild: 'startDate',
+          startAt: new Date().getTime()
+        }
+      });
   }
 
   getNextEvents() {

@@ -1,6 +1,6 @@
 {
   "name": "IgleFamilyApp",
-  "app_id": "",
+  "app_id": "e2bea3c2",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

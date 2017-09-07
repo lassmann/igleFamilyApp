@@ -3,7 +3,7 @@
     <name>Igle Family</name>
     <description>Aplicación de Iglesia de la Familia.</description>
     <author email="iglesiadelafamilia@gmail.com" href="http://iglesiadelafamilia.com/">Iglesia de la Familia</author>
-    <content original-src="index.html" src="http://192.168.1.2:8101" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="https://*youtube.com/*" />

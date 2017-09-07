@@ -9,6 +9,7 @@ import { LocationPage } from '../pages/location/location';
 import { BlogPage } from '../pages/blog/blog';
 import { BlogDetailPage } from '../pages/blog-detail/blog-detail';
 import { GalleryPage } from '../pages/gallery/gallery';
+import { SocialNetworksPage } from '../pages/social-networks/social-networks';
 import { NextEventsPage } from '../pages/next-events/next-events';
 import { RadioPage } from '../pages/radio/radio';
 import { FriendsGroupsPage } from '../pages/friends-groups/friends-groups';
@@ -50,6 +51,7 @@ export const firebaseConfig = {
     GalleryPage,
     NextEventsPage,
     RadioPage,
+    SocialNetworksPage,
     FriendsGroupsPage,
     VideosPage,
     YouTubePipe
@@ -69,6 +71,7 @@ export const firebaseConfig = {
     BlogDetailPage,
     AboutUsPage,
     LocationPage,
+    SocialNetworksPage,
     GalleryPage,
     NextEventsPage,
     RadioPage,

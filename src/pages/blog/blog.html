@@ -12,7 +12,7 @@
   <div class="containerBanner">
     <img class="banner" src="assets/images/blog.png" alt="banner2">
   </div>
-  <ion-card *ngFor="let entry of blog">
-      <img [src]="entry.img" alt="blog_image" (click)="readEntry(entry)">
+  <ion-card *ngFor="let entry of blog" class="cardContainer">
+      <img class="imageBlog" [src]="entry.img" alt="blog_image" (click)="readEntry(entry)">
   </ion-card>
 </ion-content>

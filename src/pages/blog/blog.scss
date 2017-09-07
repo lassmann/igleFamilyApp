@@ -1,3 +1,11 @@
 page-blog {
-
+  .cardContainer {
+    width: 270px;
+    margin: 5px auto;
+    .imageBlog {
+      height: 180px;
+      width: 270px;
+      margin: auto;
+    }
+  }
 }

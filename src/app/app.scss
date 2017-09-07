@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,29 +13,38 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-.sideImageContainer{
+.sideImageContainer {
   display: flex;
   height: 120px;
-  //position: fixed;
-  //bottom: 0;
   width: 100%;
   margin-botton: 10px;
-  .sideImage{
+  .sideImage {
     height: 100px;
     margin: auto
   }
 }
+
 .toolbar-background {
   background-color: #C60D3B;
 }
 
-.containerBanner{
-  .banner{
-    height: 120px;
+.containerBanner {
+  .banner {
+    //height: 120px;
     width: 100%;
   }
 }
 
+.toolbar-title.toolbar-title-wp {
+  color: #FFFFFF
+}
 
 
-.toolbar-title.toolbar-title-wp { color: #FFFFFF }
+@font-face{
+  font-family: Lato;
+  src: url('../assets/fonts/lato.woff2') format('woff2');
+}
+
+*{
+  font-family: Lato;
+}

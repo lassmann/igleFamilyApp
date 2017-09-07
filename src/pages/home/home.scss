@@ -1,26 +1,17 @@
 page-home {
-  .vision {
-    padding: 8px 16px
+  .imageIconContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 110px;
+    .imageIcon {
+      height: 75px;
+      margin: auto;
+    }
+    .labelIcon{
+      font-weight: bold;
+      margin-top: 5px;
+    }
   }
-  .shepherds{
-    padding: 8px 16px
-  }
-  .activities{
-    padding: 8px 16px
-  }
-  .schedules{
-    padding: 8px 16px
-
-  }
-  .location{
-    padding: 8px 16px
-  }
-
-  //.location {
-  //  #igleLocation {
-  //    width: 90%;
-  //    height: 300px;
-  //    margin: auto;
-  //  }
-  //}
 }

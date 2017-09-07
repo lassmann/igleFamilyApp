@@ -11,15 +11,64 @@
   <div class="containerBanner">
     <img class="banner" src="assets/images/banner2.png" alt="banner2">
   </div>
-  <button ion-button block (click)="goToAboutUs()">Nosotros</button>
-  <button ion-button block (click)="goToLocation()">Ubicacion</button>
-  <button ion-button block (click)="goToRadio()">Radio</button>
-  <button ion-button block (click)="contact()">Contacto</button>
-  <button ion-button block (click)="goToFriendsGroup()">Grupos de Amigos</button>
-  <button ion-button block (click)="goToNextEvents()">Proximos Eventos</button>
-  <button ion-button block (click)="goToBlog()">Blog</button>
-  <button ion-button block (click)="goToVideos()">Videos</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="imageIconContainer" (click)="goToAboutUs()">
+        <img class="imageIcon"
+             src="assets/images/logo-negro-sinfondo.png"
+             alt="logo">
+        <span class="labelIcon">NOSOTROS</span>
+      </ion-col>
+      <ion-col class="imageIconContainer" (click)="goToRadio()">
+        <img class="imageIcon" src="assets/images/radio.png"
+             alt="radio">
+        <span class="labelIcon">RADIO</span>
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col class="imageIconContainer" (click)="goToLocation()">
+        <img class="imageIcon"
+             src="assets/images/googlemaps.jpeg"
+             alt="logo">
+        <span class="labelIcon">UBICACION</span>
+      </ion-col>
+      <ion-col class="imageIconContainer" (click)="goToFriendsGroup()">
+        <img class="imageIcon" src="assets/images/friends.jpg"
+             alt="radio">
+        <span class="labelIcon">GRUPOS DE AMIGOS</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="imageIconContainer" (click)="goToNextEvents()">
+        <img class="imageIcon"
+             src="assets/images/next-events.png"
+             alt="logo">
+        <span class="labelIcon">PROXIMOS EVENTOS</span>
+      </ion-col>
+      <ion-col class="imageIconContainer" (click)="goToBlog()">
+        <img class="imageIcon" src="assets/images/blog2.png"
+             alt="radio">
+        <span class="labelIcon">BLOG</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="imageIconContainer" (click)="goToVideos()">
+        <img class="imageIcon"
+             src="assets/images/video1.png"
+             alt="logo">
+        <span class="labelIcon">VIDEOS</span>
+      </ion-col>
+      <ion-col class="imageIconContainer" (click)="contact()">
+        <img class="imageIcon" src="assets/images/contact-email.png"
+             alt="radio">
+        <span class="labelIcon">CONTACTO</span>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 
 
 </ion-content>

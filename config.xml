@@ -3,7 +3,7 @@
     <name>Igle Family</name>
     <description>Aplicación de Iglesia de la Familia.</description>
     <author email="iglesiadelafamilia@gmail.com" href="http://iglesiadelafamilia.com/">Iglesia de la Familia</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.1.2:8101" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="https://*youtube.com/*" />
@@ -79,6 +79,7 @@
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
     </platform>
     <allow-navigation href="http://192.168.1.3:8101" />
+    <allow-navigation href="http://192.168.1.2:8101" />
     <engine name="android" spec="^6.2.3" />
     <engine name="browser" spec="^4.1.0" />
     <engine name="ios" spec="^4.4.0" />
@@ -94,11 +95,6 @@
         <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="Show your location on the map" />
         <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="Trace your location on the map" />
     </plugin>
-    <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
-    <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
-    <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
-    <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-ionic" spec="^1.1.8">
         <variable name="APP_ID" value="e2bea3c2" />
         <variable name="CHANNEL_NAME" value="Master" />
@@ -106,4 +102,9 @@
         <variable name="UPDATE_API" value="https://api.ionicjs.com" />
         <variable name="MAX_STORE" value="2" />
     </plugin>
+    <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
+    <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
+    <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
 </widget>

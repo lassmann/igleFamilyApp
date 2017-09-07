@@ -12,7 +12,7 @@ import { GalleryPage } from '../pages/gallery/gallery';
 import { NextEventsPage } from '../pages/next-events/next-events';
 import { RadioPage } from '../pages/radio/radio';
 import { FriendsGroupsPage } from '../pages/friends-groups/friends-groups';
-import { CultsPage } from '../pages/cults/cults';
+import { VideosPage } from '../pages/videos/videos';
 import { Calendar } from '@ionic-native/calendar';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -51,7 +51,7 @@ export const firebaseConfig = {
     NextEventsPage,
     RadioPage,
     FriendsGroupsPage,
-    CultsPage,
+    VideosPage,
     YouTubePipe
   ],
   imports: [
@@ -73,7 +73,7 @@ export const firebaseConfig = {
     NextEventsPage,
     RadioPage,
     FriendsGroupsPage,
-    CultsPage
+    VideosPage
   ],
   providers: [
     StatusBar,

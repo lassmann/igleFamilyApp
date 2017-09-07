@@ -6,7 +6,7 @@ import { AboutUsPage } from '../../pages/about-us/about-us';
 import { LocationPage } from '../../pages/location/location';
 import { FriendsGroupsPage } from '../../pages/friends-groups/friends-groups';
 import { NextEventsPage } from '../../pages/next-events/next-events';
-import { CultsPage } from '../../pages/cults/cults';
+import { VideosPage } from '../videos/videos';
 import { BlogPage } from '../../pages/blog/blog';
 
 @Component({
@@ -56,7 +56,7 @@ export class HomePage {
   }
 
   goToVideos() {
-    this.navCtrl.push(CultsPage);
+    this.navCtrl.push(VideosPage);
   }
 
 }

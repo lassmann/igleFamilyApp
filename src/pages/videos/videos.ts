@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { VideosProvider } from '../../providers/videos/videos';
-import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+// import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 /**
- * Generated class for the CultsPage page.
+ * Generated class for the VideosPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -12,18 +12,18 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 @IonicPage()
 @Component({
-  selector: 'page-cults',
-  templateUrl: 'cults.html',
+  selector: 'page-videos',
+  templateUrl: 'videos.html',
 })
-export class CultsPage {
+export class VideosPage {
   videos;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private loadingCtrl: LoadingController, private videosProvider: VideosProvider, private youtube: YoutubeVideoPlayer) {
-    //constructor(public navCtrl: NavController, public navParams: NavParams, private videosProvider: VideosProvider) {
+  //constructor(public navCtrl: NavController, public navParams: NavParams, private loadingCtrl: LoadingController, private videosProvider: VideosProvider, private youtube: YoutubeVideoPlayer) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, private videosProvider: VideosProvider, private loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CultsPage');
+    console.log('ionViewDidLoad VideosPage');
   }
 
   loadingPopup = this.loadingCtrl.create({

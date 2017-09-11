@@ -66,8 +66,7 @@ export class FriendsGroupsPage {
 
     this.map.one(GoogleMapsEvent.MAP_READY)
       .then(() => {
-
-        this.map.addMarkerCluster({
+        return this.map.addMarkerCluster({
           markers: this.friendsLocations,
           icons: []
         })

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,LoadingController, Platform } from 'ionic-angular';
 import {
   GoogleMaps,
   GoogleMap,
@@ -25,7 +25,17 @@ export class FriendsGroupsPage {
   mapElement: HTMLElement;
   friendsLocations;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private loadingCtrl: LoadingController, private googleMaps: GoogleMaps, private locationProvider: LocationsProvider) {
+  constructor(public navCtrl: NavController, public platform: Platform, public navParams: NavParams,private loadingCtrl: LoadingController, private googleMaps: GoogleMaps, private locationProvider: LocationsProvider) {
+
+    this.platform.ready().then(()=>{
+      this.loadingPopup.present();
+      return  this.locationProvider.getFriendsLocations().subscribe(data => {
+        this.friendsLocations = data;
+        this.loadingPopup.dismiss();
+        this.loadMap();
+      })
+    })
+
   }
 
   loadingPopup = this.loadingCtrl.create({
@@ -36,14 +46,6 @@ export class FriendsGroupsPage {
     // this.loadMap();
   }
 
-  ngOnInit() {
-    this.loadingPopup.present();
-    this.locationProvider.getFriendsLocations().subscribe(data => {
-      this.friendsLocations = data;
-      this.loadingPopup.dismiss();
-      this.loadMap();
-    })
-  }
 
   loadMap() {
     this.mapElement = document.getElementById('map');

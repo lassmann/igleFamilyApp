@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { VideosProvider } from '../../providers/videos/videos';
-// import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, Platform} from 'ionic-angular';
+import {VideosProvider} from '../../providers/videos/videos';
+import {Observable} from 'rxjs/Observable';
+import {YoutubeVideoPlayer} from '@ionic-native/youtube-video-player';
 
 /**
  * Generated class for the VideosPage page.
@@ -16,27 +17,23 @@ import { VideosProvider } from '../../providers/videos/videos';
   templateUrl: 'videos.html',
 })
 export class VideosPage {
-  videos;
+  videos: Observable<any[]>;
 
-  //constructor(public navCtrl: NavController, public navParams: NavParams, private loadingCtrl: LoadingController, private videosProvider: VideosProvider, private youtube: YoutubeVideoPlayer) {
-    constructor(public navCtrl: NavController, public navParams: NavParams, private videosProvider: VideosProvider, private loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, private youtube: YoutubeVideoPlayer, private platform: Platform, public navParams: NavParams, private videosProvider: VideosProvider ) {
+    this.videos = this.videosProvider.getListVideos();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad VideosPage');
   }
 
-  loadingPopup = this.loadingCtrl.create({
-    content: 'Cargando...'
-  });
+  openVideo(video) {
+    if (this.platform.is('cordova')) {
+      this.youtube.openVideo(video.snippet.resourceId.videoId);
+    } else {
+      window.open('https://www.youtube.com/watch?v=' + video.snippet.resourceId.videoId);
+    }
 
-  ngOnInit() {
-    this.loadingPopup.present();
-    this.videosProvider.getVideos().subscribe(data => {
-      this.videos = data;
-      this.loadingPopup.dismiss();
-    })
   }
-
 
 }

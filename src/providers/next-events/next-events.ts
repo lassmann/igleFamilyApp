@@ -11,14 +11,15 @@ export class NextEventsProvider {
     this.events = db.list('/events',
       {
         query: {
-          orderByChild: 'startDate',
-          startAt: new Date().getTime()
+          orderByChild: 'startDate'
         }
       });
   }
 
   getNextEvents() {
-    return this.events;
+    return this.events.map((eventsArray) => {
+      return eventsArray.filter(event => event.endDate > new Date().getTime())
+    });
   }
 
 }

@@ -16,7 +16,7 @@
 
   <ion-grid>
     <ion-row *ngFor="let event of nextEvents ">
-      <button ion-item (click)="createEvent(event.title, event.location, '', event.startDate, event.endDate)">
+      <button ion-item (click)="showModal(event)">
         <ion-col col-3>{{event.startDate | date:'dMMM'}}</ion-col>
         <ion-col>{{event.title | uppercase}}</ion-col>
       </button>

@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { Calendar } from '@ionic-native/calendar';
-import { NextEventsProvider } from '../../providers/next-events/next-events'
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController, ModalController} from 'ionic-angular';
+import {NextEventsProvider} from '../../providers/next-events/next-events'
+import {ModalEventPage} from '../../pages/modal-event/modal-event'
 
 /**
  * Generated class for the NextEventsPage page.
@@ -18,13 +18,17 @@ import { NextEventsProvider } from '../../providers/next-events/next-events'
 export class NextEventsPage {
   nextEvents;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private calendar: Calendar,  private loadingCtrl: LoadingController, public nexEventsProvider: NextEventsProvider) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public navParams: NavParams, private loadingCtrl: LoadingController, public nexEventsProvider: NextEventsProvider) {
   }
 
-  createEvent(title: string, location: string, notes: string, startDate: Date, endDate: Date) {
-    startDate = new Date(startDate);
-    endDate = new Date(endDate);
-    this.calendar.createEventInteractively(title, location, notes, startDate, endDate)
+  showModal(event) {
+    let modalOpts = {
+      showBackdrop: true,
+      enableBackdropDismiss: true
+    }
+
+    let eventModal = this.modalCtrl.create(ModalEventPage, event, modalOpts);
+    eventModal.present();
   }
 
   loadingPopup = this.loadingCtrl.create({

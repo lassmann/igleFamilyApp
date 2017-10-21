@@ -1,22 +1,18 @@
 page-home {
-  .imageIconContainer {
-    box-shadow: 3px 3px 6px #888888;
-    border: 1px solid black;
-    background-color: #b0b0b1;
-    //border-radius: 10px;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    height: 90px;
-    .imageIcon {
-      height: 60px;
-      margin: auto;
-    }
-    .labelIcon{
-      font-weight: bold;
-      margin-top: 5px;
+  .grid {
+    padding: 5px 30px;
+    .imageIconContainer {
+      text-align: center;
+      .imageIcon {
+        height: 100px;
+        margin: auto;
+        box-shadow: 3px 3px 6px #888888;
+      }
+      .labelIcon {
+        font-weight: bold;
+        margin-top: 5px;
+      }
     }
   }
 }
+

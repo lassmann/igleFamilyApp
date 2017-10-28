@@ -40,6 +40,10 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      //por si se le ocurre ir para atras y salir
+      this.platform.registerBackButtonAction(() => {
+        this.nav.pop({})
+      })
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

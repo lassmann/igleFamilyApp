@@ -43,7 +43,7 @@ export class MyApp {
       //por si se le ocurre ir para atras y salir
       this.platform.registerBackButtonAction(() => {
         this.nav.pop({})
-      })
+      });
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

@@ -35,7 +35,6 @@
         "cordova-plugin-add-swift-support": "^1.7.0",
         "cordova-plugin-calendar": "^4.6.0",
         "cordova-plugin-compat": "^1.1.0",
-        "cordova-plugin-console": "^1.0.7",
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-email-composer": "^0.8.8",
         "cordova-plugin-googlemaps": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps.git#multiple_maps",
@@ -61,7 +60,6 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},

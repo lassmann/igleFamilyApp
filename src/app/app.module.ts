@@ -33,7 +33,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { LocationsProvider } from '../providers/locations/locations';
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDvNC4xexz7ICq4XF0VhDq0hd9FeJOzfkg',
+  apiKey: 'AIzaSyBoGWxYlO-MPlpB5FKdM4SxYw7kAFBXGCE',
   authDomain: 'igle-family-30ebf.firebaseapp.com',
   databaseURL: 'https://igle-family-30ebf.firebaseio.com',
   projectId: 'igle-family-30ebf',

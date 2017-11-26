@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.iglesia.familyApp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Igle Family</name>
+    <name>Iglesia de la  Familia</name>
     <description>Aplicación de Iglesia de la Familia.</description>
     <author email="iglesiadelafamilia@gmail.com" href="http://iglesiadelafamilia.com/">Iglesia de la Familia</author>
     <content src="index.html" />
@@ -83,7 +83,7 @@
     <allow-navigation href="http://192.168.1.2:8101" />
     <engine name="android" spec="^6.2.3" />
     <engine name="browser" spec="^4.1.0" />
-    <engine name="ios" spec="^4.4.0" />
+    <engine name="ios" spec="4.5.3" />
     <plugin name="cordova-plugin-calendar" spec="^4.6.0">
         <variable name="CALENDAR_USAGE_DESCRIPTION" value=" " />
     </plugin>
@@ -107,4 +107,7 @@
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
+    <plugin name="phonegap-plugin-push" spec="^2.0.0">
+        <variable name="SENDER_ID" value="659164393702" />
+    </plugin>
 </widget>

@@ -2,13 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+import {LOCALE_ID} from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeARG from '@angular/common/locales/es-AR';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { LocationPage } from '../pages/location/location';
 import { BlogPage } from '../pages/blog/blog';
 import { BlogDetailPage } from '../pages/blog-detail/blog-detail';
-import { GalleryPage } from '../pages/gallery/gallery';
 import { SocialNetworksPage } from '../pages/social-networks/social-networks';
 import { NextEventsPage } from '../pages/next-events/next-events';
 import { RadioPage } from '../pages/radio/radio';
@@ -19,14 +22,12 @@ import { Calendar } from '@ionic-native/calendar';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { LOCALE_ID } from '@angular/core';
 import { NextEventsProvider } from '../providers/next-events/next-events';
 import { HttpModule } from '@angular/http';
 import { BlogProvider } from '../providers/blog/blog';
 import { YouTubePipe } from '../pipes/you-tube/you-tube';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { GoogleMaps } from '@ionic-native/google-maps';
-import { GalleryProvider } from '../providers/gallery/gallery';
 import { VideosProvider } from '../providers/videos/videos';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -41,6 +42,8 @@ export const firebaseConfig = {
   messagingSenderId: '659164393702'
 };
 
+registerLocaleData(localeARG);
+
 @NgModule({
   declarations: [
     MyApp,
@@ -49,7 +52,6 @@ export const firebaseConfig = {
     BlogDetailPage,
     AboutUsPage,
     LocationPage,
-    GalleryPage,
     NextEventsPage,
     RadioPage,
     SocialNetworksPage,
@@ -74,7 +76,6 @@ export const firebaseConfig = {
     AboutUsPage,
     LocationPage,
     SocialNetworksPage,
-    GalleryPage,
     NextEventsPage,
     RadioPage,
     FriendsGroupsPage,
@@ -92,7 +93,6 @@ export const firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     NextEventsProvider,
     BlogProvider,
-    GalleryProvider,
     VideosProvider,
     LocationsProvider
   ]

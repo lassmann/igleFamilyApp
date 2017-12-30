@@ -25,7 +25,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NextEventsProvider } from '../providers/next-events/next-events';
 import { HttpModule } from '@angular/http';
 import { BlogProvider } from '../providers/blog/blog';
-import { YouTubePipe } from '../pipes/you-tube/you-tube';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { VideosProvider } from '../providers/videos/videos';
@@ -57,8 +56,7 @@ registerLocaleData(localeARG);
     SocialNetworksPage,
     FriendsGroupsPage,
     VideosPage,
-    ModalEventPage,
-    YouTubePipe
+    ModalEventPage
   ],
   imports: [
     BrowserModule,

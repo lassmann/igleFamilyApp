@@ -4,7 +4,7 @@ import { NextEventsPage } from './next-events';
 
 @NgModule({
   declarations: [
-    NextEventsPage,
+    //NextEventsPage,
   ],
   imports: [
     IonicPageModule.forChild(NextEventsPage),

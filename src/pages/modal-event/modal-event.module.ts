@@ -4,7 +4,7 @@ import { ModalEventPage } from './modal-event';
 
 @NgModule({
   declarations: [
-    ModalEventPage,
+    //ModalEventPage,
   ],
   imports: [
     IonicPageModule.forChild(ModalEventPage),

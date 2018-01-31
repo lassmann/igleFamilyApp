@@ -4,7 +4,7 @@ import { RadioPage } from './radio';
 
 @NgModule({
   declarations: [
-    RadioPage,
+    //RadioPage,
   ],
   imports: [
     IonicPageModule.forChild(RadioPage),

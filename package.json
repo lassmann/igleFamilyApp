@@ -37,8 +37,8 @@
     "cordova-plugin-calendar": "^5.0.0",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.7",
-    "cordova-plugin-email-composer": "^0.8.11",
-    "cordova-plugin-googlemaps": "^2.1.1",
+    "cordova-plugin-email-composer": "^0.8.14",
+    "cordova-plugin-googlemaps": "^2.2.2",
     "cordova-plugin-googlemaps-sdk": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-splashscreen": "^4.1.0",
@@ -71,7 +71,8 @@
         "API_KEY_FOR_ANDROID": "AIzaSyD_0j0AYPRG9DkBhl5KX7A6kI2Oqw0uWts",
         "API_KEY_FOR_IOS": "AIzaSyD2rsxeVCVnc_fdThBq0vxptiK8ftDDPl4",
         "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
-        "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
+        "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map",
+        "PLAY_SERVICES_VERSION": "11.8.+"
       },
       "cordova-plugin-youtube-video-player": {}
     },

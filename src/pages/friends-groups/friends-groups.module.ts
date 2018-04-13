@@ -4,7 +4,6 @@ import { FriendsGroupsPage } from './friends-groups';
 
 @NgModule({
   declarations: [
-    //FriendsGroupsPage,
   ],
   imports: [
     IonicPageModule.forChild(FriendsGroupsPage),

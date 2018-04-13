@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, LoadingController, ModalController} from 'ionic-angular';
-import {NextEventsProvider} from '../../providers/next-events/next-events'
-import {ModalEventPage} from '../../pages/modal-event/modal-event'
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
+import { NextEventsProvider } from '../../providers/next-events/next-events';
+import { ModalEventPage } from '../modal-event/modal-event';
 
 /**
  * Generated class for the NextEventsPage page.

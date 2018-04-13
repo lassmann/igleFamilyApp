@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { EmailComposer } from '@ionic-native/email-composer';
-import { RadioPage } from '../../pages/radio/radio';
-import { AboutUsPage } from '../../pages/about-us/about-us';
-import { LocationPage } from '../../pages/location/location';
-import { FriendsGroupsPage } from '../../pages/friends-groups/friends-groups';
-import { NextEventsPage } from '../../pages/next-events/next-events';
+
+import { RadioPage } from '../radio/radio';
+import { AboutUsPage } from '../about-us/about-us';
+import { LocationPage } from '../location/location';
+import { FriendsGroupsPage } from '../friends-groups/friends-groups';
+import { NextEventsPage } from '../next-events/next-events';
 import { VideosPage } from '../videos/videos';
-import { BlogPage } from '../../pages/blog/blog';
+import { BlogPage } from '../blog/blog';
 
 @Component({
   selector: 'page-home',

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { BlogProvider } from '../../providers/blog/blog'
-import { BlogDetailPage } from '../../pages/blog-detail/blog-detail'
+import { BlogDetailPage } from '../blog-detail/blog-detail'
+
 /**
  * Generated class for the BlogPage page.
  *
@@ -36,8 +37,8 @@ export class BlogPage {
     })
   }
 
-  readEntry(entry){
-   this.navCtrl.push(BlogDetailPage, {entry});
+  readEntry(entry) {
+    this.navCtrl.push(BlogDetailPage, { entry });
   }
 
 }

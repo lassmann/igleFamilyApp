@@ -2,9 +2,10 @@ page-home {
   .grid {
     padding: 20px;
     .imageIconContainer {
+      padding: 10px;
       text-align: center;
       .imageIcon {
-        height: 100px;
+        border-radius: 10px;
         margin: auto;
         box-shadow: 3px 3px 6px #888888;
       }

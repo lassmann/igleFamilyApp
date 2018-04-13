@@ -28,6 +28,9 @@ plugins/android.json
 plugins/ios.json
 www/
 $RECYCLE.BIN/
+prepare/
+yarn.lock
+.sourcemaps/
 
 .DS_Store
 Thumbs.db
